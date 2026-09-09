@@ -5,9 +5,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background-color: #0a0a0a;
-    border-bottom: 2px solid #c71585;
-    box-shadow: 0 4px 15px rgba(199, 21, 133, 0.2);
+    background-color: #1D2C4D; /* Azul escuro Pokémon */
+    border-bottom: 3px solid #EE1515; /* Vermelho Pokébola */
+    box-shadow: 0 4px 15px rgba(238, 21, 21, 0.2);
     font-family: 'Roboto', sans-serif;
     position: sticky;
     top: 0;
@@ -27,8 +27,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 26px;
     font-weight: 700;
-    color: #ffd700;
-    text-shadow: 2px 2px 0px #2a52be;
+    color: #EE1515; 
     letter-spacing: 1px;
 }
 
@@ -38,7 +37,7 @@
 }
 
 .main-nav a {
-    color: #aaaaaa;
+    color: #F2F2F2; 
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
@@ -48,13 +47,13 @@
     transition: color 0.3s ease;
 }
 
-/* Oculta links vazios para não ocupar espaço morto */
+
 .main-nav a:empty {
     display: none;
 }
 
 .main-nav a:hover {
-    color: #ffffff;
+    color: #EE1515;
 }
 
 .main-nav a::after {
@@ -64,7 +63,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffd700;
+    background-color: #EE1515;
     transition: width 0.3s ease;
 }
 
@@ -74,7 +73,7 @@
 }
 
 .main-nav a.active {
-    color: #ffffff;
+    color: #EE1515;
     font-weight: 700;
 }
 
@@ -87,26 +86,30 @@
 .search-box {
     display: flex;
     align-items: center;
-    background-color: #1e1e1e;
-    border: 1px solid #444;
+    background-color: #2A3B5C; 
+    border: 1px solid #1D2C4D;
     border-radius: 20px;
     padding: 2px 4px 2px 15px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .search-box:focus-within {
-    border-color: #c71585;
-    box-shadow: 0 0 8px rgba(199, 21, 133, 0.4);
+    border-color: #EE1515;
+    box-shadow: 0 0 8px rgba(238, 21, 21, 0.4);
 }
 
 .search-box input {
     background: transparent;
     border: none;
-    color: white;
+    color: #FFFFFF;
     outline: none;
     width: 150px;
     font-size: 13px;
     transition: width 0.3s;
+}
+
+.search-box input::placeholder {
+    color: #A3B5D1; 
 }
 
 .search-box input:focus {
@@ -116,7 +119,7 @@
 .search-btn {
     background: transparent;
     border: none;
-    color: #aaa;
+    color: #A3B5D1;
     cursor: pointer;
     padding: 6px;
     border-radius: 50%;
@@ -125,7 +128,7 @@
 }
 
 .search-btn:hover {
-    background: #333;
+    background: #1D2C4D;
 }
 
 .user-menu {
@@ -137,7 +140,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #ffffff;
+    color: #F2F2F2;
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
@@ -145,5 +148,5 @@
 }
 
 .action-btn:hover {
-    color: #ffd700;
+    color: #EE1515;
 }
