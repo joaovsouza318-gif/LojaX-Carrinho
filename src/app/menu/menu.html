@@ -1,16 +1,60 @@
-<header id="cabecalho">
+<header class="cabecalho">
 
-    <nav id="menu">
-        <ul id="menu-ul">
-            <li>
-                <a routerLink="home">Home</a>
-            </li>
-            <li>
-                <a routerLink="cadastrar">Cadastro</a>
-            </li>
-            <li>
-                <a routerLink="carrinho">Carrinho</a>
-            </li>
+    <div class="cabecalho-conteudo">
+  
+      <a routerLink="/home" class="logo">
+  
+        <div class="pokebola">
+          <div class="pokebola-centro"></div>
+        </div>
+  
+        <div class="logo-texto">
+          <strong>Pokecards
+
+          </strong>
+          <span>Pokémon TCG Store</span>
+        </div>
+  
+      </a>
+  
+  
+      <nav class="menu">
+        <ul>
+  
+          <li>
+            <a
+              routerLink="/home"
+              routerLinkActive="ativo"
+            >
+              Home
+            </a>
+          </li>
+  
+          <li>
+            <a
+              routerLink="/cadastrar"
+              routerLinkActive="ativo"
+            >
+              Cadastro
+            </a>
+          </li>
+  
         </ul>
-    </nav>
-</header>
+      </nav>
+  
+  
+      <a routerLink="/carrinho" class="carrinho-link" routerLinkActive="ativo">
+  
+        <span class="carrinho-icone">🛒</span>
+  
+        <span>Carrinho</span>
+  
+        <span class="carrinho-badge" *ngIf="quantidadeItens > 0">
+          {{ quantidadeItens }}
+        </span>
+  
+      </a>
+  
+    </div>
+  
+  </header>
