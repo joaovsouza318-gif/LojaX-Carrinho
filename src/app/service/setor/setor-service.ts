@@ -1,9 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Setor } from '../../models/setor';
 
-@Injectable({
-  providedIn: 'root'
-})
+import { Setor } from '../../models/setotr';
+
 export class SetorService {
 
   private setores: Setor[] = [
