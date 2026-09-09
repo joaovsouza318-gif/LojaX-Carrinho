@@ -1,1 +1,17 @@
-<p>home-component works!</p>
+<section class="home-produtos">
+  <h2 class="home-titulo">Escolha sua carta</h2>
+
+  <div class="grid-produtos">
+    <div class="card" *ngFor="let p of produtos">
+      <img [src]="'img/products/' + p.imagem" [alt]="p.produto" />
+
+      <h3 class="card-nome">{{ p.produto }}</h3>
+      <p class="card-descricao">{{ p.descricao_produto }}</p>
+      <p class="card-preco">R$ {{ p.valor_unitario.toFixed(2) }}</p>
+
+      <button class="card-botao" (click)="adicionarAoCarrinho(p)">
+        Adicionar ao carrinho
+      </button>
+    </div>
+  </div>
+</section>

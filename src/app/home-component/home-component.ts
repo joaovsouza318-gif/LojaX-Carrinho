@@ -1,9 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Produto } from '../models/produto';
+import { ProdutosService } from '../service/produtos/produtos-service';
+import { CarrinhoService } from '../service/carrinho/carrinho-service';
 
 @Component({
-  imports: [],
+  imports: [CommonModule],
   selector: 'app-home-component',
   styleUrl: './home-component.css',
   templateUrl: './home-component.html',
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit {
+  produtos: Produto[] = [];
+
+  constructor(
+    private produtosService: ProdutosService,
+    private carrinhoService: CarrinhoService
+  ) {}
+
+  ngOnInit(): void {
+    this.produtos = this.produtosService.listar();
+  }
+
+  adicionarAoCarrinho(produto: Produto): void {
+    this.carrinhoService.adicionar(produto);
+  }
+}

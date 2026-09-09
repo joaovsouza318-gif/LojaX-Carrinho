@@ -6,4 +6,5 @@ export class Produto{
     valor_unitario:number = 0;
     unidade:number = 0;
     estoque: number = 0;
+    imagem: string = '';
 }
