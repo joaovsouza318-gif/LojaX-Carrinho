@@ -1,0 +1,26 @@
+<div class="main-header">
+    <div class="logo-container" routerLink="/">
+        <span class="logo-text">PAMPAM STORE</span>
+    </div>
+
+    <nav class="main-nav">
+        <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a routerLink="/carrinho" routerLinkActive="active">Carrinho</a>
+        <a routerLink="/acessorios" routerLinkActive="active"></a>
+        <a routerLink="/sobre" routerLinkActive="active">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+        <div class="search-box">
+            <input type="text" placeholder="Buscar cartas...">
+            <button class="search-btn"></button>
+        </div>
+
+        <div class="user-menu">
+            <a routerLink="/login" class="action-btn">
+                <span class="icon"></span> 
+                <span class="btn-text">Login</span>
+            </a>
+        </div>
+    </div>
+</div>

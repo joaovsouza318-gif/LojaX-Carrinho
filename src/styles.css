@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #ffff;
+    color: #ffffff;
+    /* Cria um padrão de pontinhos sutis */
+    background-image: radial-gradient(#222222 1px, transparent 0);
+    background-size: 20px 20px;
+}
