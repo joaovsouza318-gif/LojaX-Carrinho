@@ -1,0 +1,102 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #222;
+    padding: 20px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #ffd700;
+    font-size: 28px;
+}
+
+/* Menu */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Conteúdo principal */
+main {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Área de apresentação da loja */
+section {
+    background-color: white;
+    width: 80%;
+    max-width: 900px;
+
+    padding: 50px;
+    text-align: center;
+
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Botão */
+button {
+    background-color: #e53935;
+    color: white;
+
+    border: none;
+    padding: 12px 25px;
+
+    border-radius: 8px;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c62828;
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+    padding: 20px;
+}
