@@ -199,8 +199,8 @@
     display: grid;
 
     grid-template-columns:
-      115px
-      minmax(180px, 1fr)
+      110px
+      minmax(200px, 1fr)
       140px
       150px;
 
@@ -210,16 +210,15 @@
 
     padding: 20px;
 
-    border: 1px solid
-      var(--borda);
+    min-height: 155px;
+
+    border: 1px solid var(--borda);
 
     border-radius: 22px;
 
-    background:
-      var(--branco);
+    background: var(--branco);
 
-    box-shadow:
-      var(--sombra);
+    box-shadow: var(--sombra);
 
     overflow: hidden;
 
@@ -264,20 +263,31 @@
   ========================== */
 
   .produto-imagem {
-    width: 95px;
+    width: 100px;
+    height: 140px;
 
-    height: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    padding: 5px;
+    flex-shrink: 0;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
-    background:
-      linear-gradient(
-        135deg,
-        #dbeafe,
-        #fef9c3
-      );
+    overflow: hidden;
+
+    background: #f8fafc;
+  }
+
+  .produto-imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    border-radius: 8px;
   }
 
 
