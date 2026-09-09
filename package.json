@@ -28,5 +28,17 @@
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",
     "vitest": "^4.0.8"
-  }
+  },
+  "description": "This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaovsouza318-gif/LojaX-Carrinho.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/joaovsouza318-gif/LojaX-Carrinho/issues"
+  },
+  "homepage": "https://github.com/joaovsouza318-gif/LojaX-Carrinho#readme"
 }
