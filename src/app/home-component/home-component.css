@@ -1,74 +1,387 @@
-.home-produtos {
-  padding: 24px;
+:host {
+  display: block;
+
+  --azul: #2563eb;
+  --azul-escuro: #172554;
+
+  --amarelo: #facc15;
+  --vermelho: #ef4444;
+
+  --fundo: #f4f7fb;
+  --branco: #ffffff;
+
+  --texto: #172033;
+  --texto-secundario: #64748b;
+
+  --borda: #e2e8f0;
+
+  --verde: #16a34a;
+
+  --sombra:
+    0 10px 30px
+    rgba(15, 23, 42, 0.08);
 }
 
-.home-titulo {
-  margin-bottom: 20px;
-  font-size: 1.5rem;
+
+/* ==========================
+   PÁGINA
+========================== */
+
+.home-container {
+  min-height: 100vh;
+
+  padding: 50px 7%;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(37, 99, 235, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(250, 204, 21, 0.10),
+      transparent 30%
+    ),
+    var(--fundo);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: var(--texto);
 }
+
+
+/* ==========================
+   TOPO
+========================== */
+
+.home-topo {
+  max-width: 1250px;
+
+  margin: 0 auto 35px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 25px;
+}
+
+
+.subtitulo {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: var(--azul);
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+
+.home-topo h1 {
+  margin: 0;
+
+  color: var(--azul-escuro);
+
+  font-size: 45px;
+}
+
+
+.home-topo p {
+  margin-top: 8px;
+
+  color: var(--texto-secundario);
+}
+
+
+/* ==========================
+   CONTADOR
+========================== */
+
+.contador-itens {
+  width: 75px;
+
+  height: 75px;
+
+  border-radius: 20px;
+
+  background: var(--amarelo);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: var(--azul-escuro);
+
+  box-shadow: var(--sombra);
+
+  transform: rotate(3deg);
+
+  text-decoration: none;
+
+  transition: transform 0.2s ease;
+}
+
+.contador-itens:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+
+.contador-itens strong {
+  font-size: 26px;
+
+  line-height: 1;
+}
+
+
+.contador-itens span {
+  margin-top: 5px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+
+/* ==========================
+   GRID DE PRODUTOS
+========================== */
 
 .grid-produtos {
+  max-width: 1250px;
+
+  margin: auto;
+
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+  gap: 22px;
 }
 
-.card {
+
+.produto-card {
+  position: relative;
+
   display: flex;
+
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
+
+  padding: 20px;
+
+  border: 1px solid var(--borda);
+
+  border-radius: 22px;
+
+  background: var(--branco);
+
+  box-shadow: var(--sombra);
+
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  padding-bottom: 14px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-}
 
-.card img {
+.produto-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
   width: 100%;
+  height: 5px;
+
+  background:
+    linear-gradient(
+      to right,
+      var(--azul),
+      var(--amarelo)
+    );
+}
+
+
+.produto-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(15, 23, 42, 0.13);
+}
+
+
+.produto-imagem {
+  width: 100%;
+
   aspect-ratio: 3 / 4;
-  object-fit: cover;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-bottom: 14px;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  background: #f8fafc;
 }
 
-.card-nome {
-  margin: 10px 0 2px;
-  font-size: 1.05rem;
-  font-weight: 700;
+
+.produto-imagem img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
 }
 
-.card-descricao {
-  margin: 0 0 6px;
-  font-size: 0.8rem;
-  color: #666;
-  padding: 0 10px;
+
+.categoria {
+  display: inline-block;
+
+  margin-bottom: 5px;
+
+  color: var(--azul);
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
 }
 
-.card-preco {
-  margin: 0 0 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #2e7d32;
+
+.produto-card h2 {
+  margin: 0;
+
+  color: var(--azul-escuro);
+
+  font-size: 19px;
 }
 
-.card-botao {
+
+.colecao {
+  margin: 5px 0 14px;
+
+  color: var(--texto-secundario);
+
+  font-size: 13px;
+
+  flex-grow: 1;
+}
+
+
+.produto-rodape {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+
+.preco {
+  color: var(--azul-escuro);
+
+  font-size: 18px;
+}
+
+
+.botao-adicionar {
+  padding: 10px 16px;
+
   border: none;
-  background: #ffcb05;
-  color: #1a1a1a;
-  font-weight: 700;
-  padding: 8px 14px;
-  border-radius: 8px;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--azul),
+      #1d4ed8
+    );
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
   cursor: pointer;
-  transition: background 0.2s ease;
+
+  box-shadow:
+    0 8px 20px
+    rgba(37, 99, 235, 0.25);
+
+  transition: 0.2s;
 }
 
-.card-botao:hover {
-  background: #e6b800;
+
+.botao-adicionar:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px
+    rgba(37, 99, 235, 0.35);
+}
+
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media (max-width: 600px) {
+
+  .home-container {
+    padding: 30px 18px;
+  }
+
+  .home-topo {
+    align-items: center;
+  }
+
+  .home-topo h1 {
+    font-size: 32px;
+  }
+
+  .contador-itens {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .contador-itens {
+    display: none;
+  }
+
+  .home-topo p {
+    font-size: 13px;
+  }
 }
