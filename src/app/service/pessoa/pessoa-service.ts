@@ -1,9 +1,11 @@
-import { HttpClient, httpResource } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Pessoa } from '../../models/pessoa';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class PessoaService {
     constructor (private http: HttpClient) {}
 
