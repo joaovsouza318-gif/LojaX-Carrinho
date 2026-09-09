@@ -16,7 +16,7 @@ export const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: "lista de produtos",
+        path: "lista-produtos",
         component: Listaprodutos
     },
     {
