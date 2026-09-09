@@ -1,17 +1,67 @@
-<section class="home-produtos">
-  <h2 class="home-titulo">Escolha sua carta</h2>
+<main class="home-container">
 
-  <div class="grid-produtos">
-    <div class="card" *ngFor="let p of produtos">
-      <img [src]="'img/products/' + p.imagem" [alt]="p.produto" />
+  <section class="home-topo">
 
-      <h3 class="card-nome">{{ p.produto }}</h3>
-      <p class="card-descricao">{{ p.descricao_produto }}</p>
-      <p class="card-preco">R$ {{ p.valor_unitario.toFixed(2) }}</p>
+    <div>
+      <span class="subtitulo">
+        POKÉMON TCG STORE
+      </span>
 
-      <button class="card-botao" (click)="adicionarAoCarrinho(p)">
-        Adicionar ao carrinho
-      </button>
+      <h1>Escolha suas cartas</h1>
+
+      <p>
+        Monte seu deck com os melhores Pokémon da coleção.
+      </p>
     </div>
-  </div>
-</section>
+
+
+    <a routerLink="/carrinho" class="contador-itens">
+
+      <strong>
+        {{ quantidadeItens }}
+      </strong>
+
+      <span>
+        itens
+      </span>
+
+    </a>
+
+  </section>
+
+
+  <section class="grid-produtos">
+
+    <article class="produto-card" *ngFor="let p of produtos">
+
+      <div class="produto-imagem">
+        <img [src]="'img/products/' + p.imagem" [alt]="p.produto" />
+      </div>
+
+      <span class="categoria">Pokémon TCG</span>
+
+      <h2>{{ p.produto }}</h2>
+
+      <p class="colecao">{{ p.descricao_produto }}</p>
+
+      <div class="produto-rodape">
+
+        <strong class="preco">
+          R$ {{ p.valor_unitario.toFixed(2) }}
+        </strong>
+
+        <button
+          type="button"
+          class="botao-adicionar"
+          (click)="adicionarAoCarrinho(p)"
+        >
+          Adicionar
+        </button>
+
+      </div>
+
+    </article>
+
+  </section>
+
+</main>
