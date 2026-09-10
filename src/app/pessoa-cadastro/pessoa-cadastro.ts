@@ -27,7 +27,7 @@ export class PessoaCadastro {
   pessoaId = 0
 
   exibeDados(){
-    console.log(this.idpessoa, this.nome, this.cpf, this.data_nascimento, this.sexo, this.telefone, this.email, this.senha);
+    console.log(this.idpessoa, this.nome, this.cpf, this.data_nascimento, this.sexo, this.telefone, this.email);
 
     this.limparCampos();
   }
@@ -106,7 +106,6 @@ export class PessoaCadastro {
     }
 
     this.limparCampos();
-    this.exibeDados();
   }
 
   listarPessoa(pessoaId: number){
