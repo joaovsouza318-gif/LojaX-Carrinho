@@ -1,5 +1,11 @@
+/* Configurações gerais */
 
-/* Estrutura geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :host {
   display: block;
   min-height: 100vh;
@@ -8,157 +14,332 @@
   color: #222;
 }
 
-/* Cabeçalho */
+/* =========================
+     CABEÇALHO
+     ========================= */
+
 header {
-  background: #222;
-  padding: 20px;
-  text-align: center;
+  background-color: #222;
+  padding: 20px 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
-  margin: 0 0 15px;
-  font-size: 32px;
+  margin: 0;
+  color: white;
+  font-size: 28px;
 }
 
-/* Menu */
 nav {
   display: flex;
-  justify-content: center;
   gap: 25px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  font-size: 16px;
   font-weight: bold;
+  transition: opacity 0.2s;
 }
 
 nav a:hover {
   text-decoration: underline;
+  opacity: 0.7;
 }
 
-/* Conteúdo principal */
+/* =========================
+     ÁREA PRINCIPAL
+     ========================= */
+
 main {
+  width: 100%;
   max-width: 1200px;
+  min-height: 80vh;
+
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 40px 30px;
 }
 
-/* Boas-vindas */
-.boas-vindas {
-  text-align: center;
-  margin-bottom: 35px;
-}
+/* =========================
+     TOPO DA LISTA
+     ========================= */
 
-.boas-vindas h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
+.home-topo {
+  width: 100%;
 
-.boas-vindas p {
-  font-size: 17px;
-  color: #555;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-/* Lista dos produtos */
-.lista-produtos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
+  margin-bottom: 40px;
+  padding: 30px;
 
-/* Card do produto */
-.card-produto {
   background: white;
   border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-.card-produto:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+.subtitulo {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #777;
 }
 
-/* Imagem */
-.imagem-produto {
-  height: 220px;
+.home-topo h1 {
+  margin: 10px 0;
+  font-size: 34px;
+}
+
+.home-topo p {
+  margin: 0;
+  color: #666;
+}
+
+/* =========================
+     CONTADOR DO CARRINHO
+     ========================= */
+
+.contador-itens {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  min-width: 90px;
+  min-height: 70px;
+
+  border-radius: 12px;
+
+  background: #222;
+  color: white;
+
+  text-decoration: none;
+
+  transition: transform 0.2s;
+}
+
+.contador-itens:hover {
+  transform: translateY(-3px);
+}
+
+.contador-itens strong {
+  font-size: 25px;
+}
+
+.contador-itens span {
+  font-size: 14px;
+}
+
+/* =========================
+     GRID DOS PRODUTOS
+     ========================= */
+
+.grid-produtos {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  margin: 0 auto;
+}
+
+/* =========================
+     CARD DO PRODUTO
+     ========================= */
+
+.produto-card {
+  background: white;
+
+  border-radius: 15px;
+
+  padding: 20px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.produto-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+     IMAGEM DO PRODUTO
+     ========================= */
+
+.produto-imagem {
+  height: 230px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin-bottom: 15px;
 }
 
-.imagem-produto img {
+.produto-imagem img {
   max-width: 100%;
-  max-height: 210px;
+  max-height: 220px;
+
   object-fit: contain;
 }
 
-/* Informações */
-.informacoes-produto h2 {
-  margin: 10px 0;
+/* =========================
+     INFORMAÇÕES DO PRODUTO
+     ========================= */
+
+.categoria {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  color: #777;
+
+  text-transform: uppercase;
+}
+
+.produto-card h2 {
+  margin: 8px 0;
+
   font-size: 23px;
 }
 
-.descricao {
-  color: #666;
+.colecao {
   min-height: 40px;
+
+  color: #666;
 }
 
-.informacoes-produto p {
-  margin: 8px 0;
+/* =========================
+     RODAPÉ DO CARD
+     ========================= */
+
+.produto-rodape {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 20px;
 }
 
-/* Botão */
-button {
-  margin-top: 15px;
-  padding: 12px 20px;
+.preco {
+  font-size: 19px;
+}
+
+/* =========================
+     BOTÃO
+     ========================= */
+
+.botao-adicionar {
+  margin-top: 0;
+
+  padding: 11px 18px;
+
   border: none;
   border-radius: 8px;
-  background: #333;
+
+  background: #e53935;
   color: white;
-  font-size: 15px;
+
+  font-size: 14px;
   font-weight: bold;
+
   cursor: pointer;
-  transition: transform 0.2s, opacity 0.2s;
+
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
 }
 
-button:hover {
+.botao-adicionar:hover {
   transform: scale(1.05);
   opacity: 0.85;
 }
 
-/* Rodapé */
+/* =========================
+     RODAPÉ
+     ========================= */
+
 footer {
   margin-top: 40px;
-  padding: 20px;
+
+  padding: 25px;
+
   text-align: center;
+
   background: #222;
   color: white;
 }
 
-/* Celular */
-@media (max-width: 600px) {
+footer p {
+  margin: 0;
+}
 
-  header h1 {
-    font-size: 25px;
+/* =========================
+     CELULAR
+     ========================= */
+
+@media (max-width: 900px) {
+  .grid-produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px;
   }
 
   nav {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+
+    text-align: center;
   }
 
   main {
-    padding: 20px 10px;
+    padding: 25px 15px;
   }
 
-  .lista-produtos {
+  .home-topo {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 25px;
+  }
+
+  .home-topo h1 {
+    font-size: 28px;
+  }
+
+  .grid-produtos {
     grid-template-columns: 1fr;
   }
 
-}
+  .produto-rodape {
+    flex-direction: column;
 
+    gap: 15px;
+  }
+}

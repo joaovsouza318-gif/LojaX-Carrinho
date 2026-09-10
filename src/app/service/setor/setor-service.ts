@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import { Setor } from '../../models/setor';
+=======
+import { Setor } from "../../models/setor";
+>>>>>>> 407ffc9597d95c224820b5cd1ce0377dfe5d1c1a
 
 export class SetorService {
 
