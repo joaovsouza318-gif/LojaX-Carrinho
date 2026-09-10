@@ -27,6 +27,10 @@ export const routes: Routes = [
     component: PessoaCadastro
   },
   {
+    path: 'cadastrar/:idpessoa',
+    component: PessoaCadastro
+  },
+  {
     path: 'listar-pessoa',
     component: ListarPessoas
   },
