@@ -1,0 +1,102 @@
+:host {
+    display: block;
+    min-height: calc(100vh - 80px);
+  
+    background-image: url('/img/products/fundo da loja.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Título */
+  h1 {
+    max-width: 1100px;
+    margin: 0 auto 25px auto;
+  
+    padding: 20px 25px;
+  
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 15px;
+  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+  }
+  
+  /* Formulário */
+  form {
+    max-width: 1100px;
+    margin: 0 auto;
+  
+    padding: 30px;
+  
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 18px;
+  
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Espaçamento dos campos */
+  form input {
+    margin: 5px 10px 15px 5px;
+    padding: 8px;
+  
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  /* Botões */
+  form button {
+    padding: 10px 20px;
+    margin-right: 8px;
+  
+    border: none;
+    border-radius: 7px;
+  
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Botão cadastrar */
+  form button[type="submit"] {
+    background: #2563eb;
+    color: white;
+  }
+  
+  /* Botão limpar */
+  form button[type="reset"] {
+    background: #e5e7eb;
+    color: #172033;
+  }
+  
+  /* Efeito ao passar o mouse */
+  form button:hover {
+    opacity: 0.85;
+  }
+  
+  /* Celular */
+  @media (max-width: 700px) {
+  
+    :host {
+      padding: 20px 10px;
+      background-position: center;
+    }
+  
+    h1 {
+      font-size: 26px;
+    }
+  
+    form {
+      padding: 20px;
+    }
+  
+    form input {
+      width: 100%;
+      box-sizing: border-box;
+      margin: 5px 0 12px 0;
+    }
+  }
