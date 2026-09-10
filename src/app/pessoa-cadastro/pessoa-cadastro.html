@@ -28,7 +28,7 @@
         <input type="password" name="senha" id="senha" maxlength="150" [(ngModel)]="senha" required>
 
         <div id="div-btns">
-            <button type="submit">Cadastrar</button>
+            <button type="submit">{{editar ? "Salvar Alterações" : "Cadastrar"}}</button>
             <button type="reset">Limpar</button>
         </div>
 

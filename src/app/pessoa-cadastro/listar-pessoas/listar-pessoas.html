@@ -2,15 +2,24 @@
     <h2>Listar Pessoas</h2>
 
     <div id="listar-pessoas">
-        
-        <div id="div-btns">
-            <button type="button" id="btnAdd" >Editar</button>
-            <button type="button" id="btnLimpar">Limpar</button>
-        </div>
+        @for (elem of listarPessoas(); track elem.idpessoa){
+          <div class="item-pessoa">
+            <span class="dados-pessoas">
+                {{elem.idpessoa}} - {{elem.nome}} - {{elem.cpf}} - {{calcIdade(elem.data_nascimento)}} anos - {{elem.sexo}} - {{elem.telefone}} - {{elem.email}}
+            </span>
 
-        <div class=" div-pessoas">
-            NENHUM REGISTRO NA LISTA
-        </div>
+            <span class="lnks-lista">
+                <a class="lnk-editar" (click)="buscarPessoas(elem)"> Editar </a>
+                
+                <a class="lnk-excluir" (click)="excluirPessoa(elem)"> Excluir </a>
+            </span>
+          </div>
+        }@empty{
+            <div class=" div-pessoas">
+                NENHUM REGISTRO NA LISTA
+            </div>
+        }
+        
     </div>
 
 </div>
