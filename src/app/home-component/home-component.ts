@@ -19,7 +19,14 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.produtos = this.produtosService.listar();
+    this.produtosService.listar().subscribe({
+      next: (produtos) => {
+        this.produtos = produtos;
+      },
+      error: (erro) => {
+        console.error('Erro ao carregar produtos:', erro);
+      }
+    });
   }
 
   adicionarAoCarrinho(produto: Produto): void {

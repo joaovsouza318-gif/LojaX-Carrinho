@@ -5,6 +5,18 @@ import { Produto } from '../../models/produto';
   providedIn: 'root',
 })
 export class ProdutosService {
+
+  constructor(private http: HttpClient) {}
+
+  listar(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`${this.apiUrl}/`);
+  }
+
+  buscarPorId(idproduto: number): Observable<Produto> {
+    return this.http.get<Produto>(`${this.apiUrl}/${idproduto}`);
+  }
+}
+
   // Dados mockados por enquanto. Quando a API estiver pronta,
   // troque o método listar() para buscar via HttpClient, ex:
   //
@@ -13,7 +25,7 @@ export class ProdutosService {
   //   return this.http.get<Produto[]>('http://localhost:PORTA/api/produtos');
   // }
 
-  private produtos: Produto[] = [
+/*  private produtos: Produto[] = [
     {
       idproduto: 1,
       idsetor: 1,
@@ -120,3 +132,5 @@ export class ProdutosService {
     return this.produtos;
   }
 }
+*/
+
