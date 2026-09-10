@@ -1,112 +1,100 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* Configurações gerais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #222;
-=======
-
-/* Estrutura geral */
-=======
-/* Configuração geral */
->>>>>>> fec8a554fd8b9d830ebd270428d75ca4086c7ee8
-:host {
-  display: block;
-  min-height: 100vh;
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  background-color: #f2f2f2;
   color: #222;
->>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
-}
 
-/* =========================
+  /* Estrutura geral */
+
+  /* Configuração geral */
+  :host {
+    display: block;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #222;
+  }
+
+  /* =========================
      CABEÇALHO
      ========================= */
 
-header {
-<<<<<<< HEAD
+  header {
     background-color: #222;
     padding: 20px 50px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+  }
 
-header h1 {
+  header h1 {
     color: #ffd700;
     font-size: 28px;
-=======
-  background: #222;
-  padding: 20px;
-  text-align: center;
-}
 
-header h1 {
-  margin: 0 0 20px;
-  color: white;
-  font-size: 32px;
->>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
-}
+    background: #222;
+    padding: 20px;
+    text-align: center;
+  }
 
-nav {
-<<<<<<< HEAD
+  header h1 {
+    margin: 0 0 20px;
+    color: white;
+    font-size: 32px;
+  }
+
+  nav {
     display: flex;
     gap: 25px;
-}
+  }
 
-nav a {
+  nav a {
     color: white;
     text-decoration: none;
     font-size: 16px;
-}
+  }
 
-nav a:hover {
+  nav a:hover {
     color: #ffd700;
-=======
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: opacity 0.2s;
-}
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
 
-nav a:hover {
-<<<<<<< HEAD
-  text-decoration: underline;
->>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
-=======
-  opacity: 0.7;
->>>>>>> fec8a554fd8b9d830ebd270428d75ca4086c7ee8
-}
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2s;
+  }
 
-/* =========================
+  nav a:hover {
+    text-decoration: underline;
+
+    opacity: 0.7;
+  }
+
+  /* =========================
      ÁREA PRINCIPAL
      ========================= */
 
-main {
-<<<<<<< HEAD
+  main {
     min-height: 80vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-/* Área de apresentação da loja */
-section {
+  /* Área de apresentação da loja */
+  section {
     background-color: white;
     width: 80%;
     max-width: 900px;
@@ -116,260 +104,258 @@ section {
 
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
+  }
 
-section h2 {
+  section h2 {
     font-size: 32px;
     margin-bottom: 20px;
-}
+  }
 
-section p {
+  section p {
     font-size: 18px;
     margin-bottom: 30px;
-=======
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 25px;
-}
 
-/* =========================
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 25px;
+  }
+
+  /* =========================
      TOPO DA LISTA
      ========================= */
 
-.home-topo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .home-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  margin-bottom: 40px;
-  padding: 30px;
+    margin-bottom: 40px;
+    padding: 30px;
 
-  background: white;
-  border-radius: 15px;
+    background: white;
+    border-radius: 15px;
 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
 
-.subtitulo {
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  color: #777;
-}
+  .subtitulo {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #777;
+  }
 
-.home-topo h1 {
-  margin: 10px 0;
-  font-size: 34px;
-}
+  .home-topo h1 {
+    margin: 10px 0;
+    font-size: 34px;
+  }
 
-.home-topo p {
-  margin: 0;
-  color: #666;
-}
+  .home-topo p {
+    margin: 0;
+    color: #666;
+  }
 
-/* =========================
+  /* =========================
      CONTADOR DO CARRINHO
      ========================= */
 
-.contador-itens {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  .contador-itens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  min-width: 90px;
-  min-height: 70px;
+    min-width: 90px;
+    min-height: 70px;
 
-  border-radius: 12px;
+    border-radius: 12px;
 
-  background: #222;
-  color: white;
+    background: #222;
+    color: white;
 
-  text-decoration: none;
+    text-decoration: none;
 
-  transition: transform 0.2s;
-}
+    transition: transform 0.2s;
+  }
 
-.contador-itens:hover {
-  transform: translateY(-3px);
-}
+  .contador-itens:hover {
+    transform: translateY(-3px);
+  }
 
-.contador-itens strong {
-  font-size: 25px;
-}
+  .contador-itens strong {
+    font-size: 25px;
+  }
 
-.contador-itens span {
-  font-size: 14px;
-}
+  .contador-itens span {
+    font-size: 14px;
+  }
 
-/* =========================
+  /* =========================
      GRID DOS PRODUTOS
      ========================= */
 
-.grid-produtos,
-.lista-produtos {
-  display: grid;
+  .grid-produtos,
+  .lista-produtos {
+    display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-  gap: 25px;
-}
+    gap: 25px;
+  }
 
-/* =========================
+  /* =========================
      PRIMEIRO TIPO DE CARD
      ========================= */
 
-.produto-card {
-  background: white;
+  .produto-card {
+    background: white;
 
-  border-radius: 15px;
+    border-radius: 15px;
 
-  padding: 20px;
+    padding: 20px;
 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
-}
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+  }
 
-.produto-card:hover {
-  transform: translateY(-7px);
+  .produto-card:hover {
+    transform: translateY(-7px);
 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
 
-/* Imagem do primeiro card */
+  /* Imagem do primeiro card */
 
-.produto-imagem {
-  height: 230px;
+  .produto-imagem {
+    height: 230px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  margin-bottom: 15px;
-}
+    margin-bottom: 15px;
+  }
 
-.produto-imagem img {
-  max-width: 100%;
-  max-height: 220px;
+  .produto-imagem img {
+    max-width: 100%;
+    max-height: 220px;
 
-  object-fit: contain;
-}
+    object-fit: contain;
+  }
 
-/* Informações do primeiro card */
+  /* Informações do primeiro card */
 
-.categoria {
-  display: inline-block;
+  .categoria {
+    display: inline-block;
 
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 
-  font-size: 12px;
-  font-weight: bold;
+    font-size: 12px;
+    font-weight: bold;
 
-  color: #777;
+    color: #777;
 
-  text-transform: uppercase;
-}
+    text-transform: uppercase;
+  }
 
-.produto-card h2 {
-  margin: 8px 0;
+  .produto-card h2 {
+    margin: 8px 0;
 
-  font-size: 23px;
-}
+    font-size: 23px;
+  }
 
-.colecao {
-  min-height: 40px;
+  .colecao {
+    min-height: 40px;
 
-  color: #666;
-}
+    color: #666;
+  }
 
-/* Rodapé do card */
+  /* Rodapé do card */
 
-.produto-rodape {
-  display: flex;
+  .produto-rodape {
+    display: flex;
 
-  justify-content: space-between;
-  align-items: center;
+    justify-content: space-between;
+    align-items: center;
 
-  margin-top: 20px;
-}
+    margin-top: 20px;
+  }
 
-.preco {
-  font-size: 19px;
-}
+  .preco {
+    font-size: 19px;
+  }
 
-/* =========================
+  /* =========================
      SEGUNDO TIPO DE CARD
      ========================= */
 
-.card-produto {
-  background: white;
+  .card-produto {
+    background: white;
 
-  border-radius: 15px;
+    border-radius: 15px;
 
-  padding: 20px;
+    padding: 20px;
 
-  text-align: center;
+    text-align: center;
 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
-}
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+  }
 
-.card-produto:hover {
-  transform: translateY(-7px);
+  .card-produto:hover {
+    transform: translateY(-7px);
 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
 
-/* Imagem do segundo card */
+  /* Imagem do segundo card */
 
-.imagem-produto {
-  height: 220px;
+  .imagem-produto {
+    height: 220px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  margin-bottom: 15px;
-}
+    margin-bottom: 15px;
+  }
 
-.imagem-produto img {
-  max-width: 100%;
-  max-height: 210px;
+  .imagem-produto img {
+    max-width: 100%;
+    max-height: 210px;
 
-  object-fit: contain;
-}
+    object-fit: contain;
+  }
 
-/* Informações do segundo card */
+  /* Informações do segundo card */
 
-.informacoes-produto h2 {
-  margin: 10px 0;
+  .informacoes-produto h2 {
+    margin: 10px 0;
 
-  font-size: 23px;
-}
+    font-size: 23px;
+  }
 
-.descricao {
-  min-height: 40px;
+  .descricao {
+    min-height: 40px;
 
-  color: #666;
-}
+    color: #666;
+  }
 
-.informacoes-produto p {
-  margin: 8px 0;
->>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
-}
+  .informacoes-produto p {
+    margin: 8px 0;
+  }
 
-/* =========================
+  /* =========================
      BOTÕES
      ========================= */
 
-button {
-<<<<<<< HEAD
+  button {
     background-color: #e53935;
     color: white;
 
@@ -380,82 +366,80 @@ button {
     font-size: 16px;
 
     cursor: pointer;
-}
+  }
 
-button:hover {
+  button:hover {
     background-color: #c62828;
-=======
-  margin-top: 15px;
 
-  padding: 11px 18px;
+    margin-top: 15px;
 
-  border: none;
-  border-radius: 8px;
+    padding: 11px 18px;
 
-  background: #222;
-  color: white;
+    border: none;
+    border-radius: 8px;
 
-  font-size: 14px;
-  font-weight: bold;
+    background: #222;
+    color: white;
 
-  cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
 
-  transition:
-    transform 0.2s,
-    opacity 0.2s;
-}
+    cursor: pointer;
 
-button:hover {
-  transform: scale(1.05);
-  opacity: 0.85;
->>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
-}
+    transition:
+      transform 0.2s,
+      opacity 0.2s;
+  }
 
-.botao-adicionar {
-  margin-top: 0;
-}
+  button:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
 
-/* =========================
+  .botao-adicionar {
+    margin-top: 0;
+  }
+
+  /* =========================
      BOAS-VINDAS
      ========================= */
 
-.boas-vindas {
-  margin-bottom: 35px;
+  .boas-vindas {
+    margin-bottom: 35px;
 
-  padding: 30px;
+    padding: 30px;
 
-  text-align: center;
+    text-align: center;
 
-  background: white;
+    background: white;
 
-  border-radius: 15px;
+    border-radius: 15px;
 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
 
-.boas-vindas h2 {
-  margin-bottom: 10px;
+  .boas-vindas h2 {
+    margin-bottom: 10px;
 
-  font-size: 28px;
-}
+    font-size: 28px;
+  }
 
-.boas-vindas p {
-  color: #666;
-}
+  .boas-vindas p {
+    color: #666;
+  }
 
-/* =========================
+  /* =========================
      RODAPÉ
      ========================= */
 
-footer {
-<<<<<<< HEAD
+  footer {
     background-color: #222;
     color: white;
 
     text-align: center;
     padding: 20px;
-}
-=======
+  }
+
   margin-top: 40px;
 
   padding: 25px;
@@ -506,10 +490,6 @@ footer p {
   .produto-rodape {
     flex-direction: column;
 
-<<<<<<< HEAD
->>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
-=======
     gap: 15px;
   }
 }
->>>>>>> fec8a554fd8b9d830ebd270428d75ca4086c7ee8
