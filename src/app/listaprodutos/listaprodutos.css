@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Configurações gerais */
 * {
     margin: 0;
@@ -9,10 +10,21 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     color: #222;
+=======
+
+/* Estrutura geral */
+:host {
+  display: block;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #222;
+>>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
 }
 
 /* Cabeçalho */
 header {
+<<<<<<< HEAD
     background-color: #222;
     padding: 20px 50px;
 
@@ -24,10 +36,21 @@ header {
 header h1 {
     color: #ffd700;
     font-size: 28px;
+=======
+  background: #222;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 15px;
+  font-size: 32px;
+>>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
 }
 
 /* Menu */
 nav {
+<<<<<<< HEAD
     display: flex;
     gap: 25px;
 }
@@ -40,10 +63,26 @@ nav a {
 
 nav a:hover {
     color: #ffd700;
+=======
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+>>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
 }
 
 /* Conteúdo principal */
 main {
+<<<<<<< HEAD
     min-height: 80vh;
 
     display: flex;
@@ -72,10 +111,84 @@ section h2 {
 section p {
     font-size: 18px;
     margin-bottom: 30px;
+=======
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Boas-vindas */
+.boas-vindas {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.boas-vindas h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.boas-vindas p {
+  font-size: 17px;
+  color: #555;
+}
+
+/* Lista dos produtos */
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Card do produto */
+.card-produto {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-produto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagem */
+.imagem-produto {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.imagem-produto img {
+  max-width: 100%;
+  max-height: 210px;
+  object-fit: contain;
+}
+
+/* Informações */
+.informacoes-produto h2 {
+  margin: 10px 0;
+  font-size: 23px;
+}
+
+.descricao {
+  color: #666;
+  min-height: 40px;
+}
+
+.informacoes-produto p {
+  margin: 8px 0;
+>>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
 }
 
 /* Botão */
 button {
+<<<<<<< HEAD
     background-color: #e53935;
     color: white;
 
@@ -90,13 +203,62 @@ button {
 
 button:hover {
     background-color: #c62828;
+=======
+  margin-top: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+>>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
 }
 
 /* Rodapé */
 footer {
+<<<<<<< HEAD
     background-color: #222;
     color: white;
 
     text-align: center;
     padding: 20px;
 }
+=======
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background: #222;
+  color: white;
+}
+
+/* Celular */
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  .lista-produtos {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+>>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a

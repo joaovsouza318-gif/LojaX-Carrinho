@@ -4,7 +4,7 @@ export class Produto{
     produto: string = '';
     descricao_produto: string = '';
     valor_unitario:number = 0;
-    unidade:number = 0;
+    unidade:string = '';
     estoque: number = 0;
     imagem: string = '';
 }

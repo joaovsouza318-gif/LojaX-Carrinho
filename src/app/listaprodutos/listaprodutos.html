@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p>listaprodutos works!</p>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,36 +9,65 @@
     <link rel="stylesheet" href="listaprodutos.css">
 </head>
 <body>
+=======
+```html
+<header>
+  <h1>Loja de Cartas de Pokémon</h1>
+>>>>>>> ceac4a0c7a34594d8cd81bba340fe817c5b1544a
 
-    <header>
-        <h1>Loja de Cartas de Pokémon</h1>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Produtos</a>
+    <a href="#">Carrinho</a>
+    <a href="#">Pessoas</a>
+    <a href="#">Setores</a>
+  </nav>
+</header>
 
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">produtos</a>
-            <a href="#">Carrinho</a>
-            <a href="#">Pessoas</a>
-            <a href="#">Setores</a>
-        </nav>
+<main>
+  <section class="boas-vindas">
+    <h2>Bem-vindo à nossa loja!</h2>
 
-            <header>
-                <main>
+    <p>Encontre as melhores cartas de Pokémon para sua coleção.</p>
+  </section>
 
-                    <section>
-                        <h2>Bem-vindo á nossa loja!</h2>
-                        <p>
-                            Encontre as melhores cartas de pokémon para sua coleção.
-                        </p>
-                    </section>
+  <section class="lista-produtos">
+    @for (produto of produtos; track produto.idproduto) {
+      <div class="card-produto">
+        <div class="imagem-produto">
+          <img [src]="produto.imagem" [alt]="produto.produto" />
+        </div>
 
-                </main>
+        <div class="informacoes-produto">
+          <h2>{{ produto.produto }}</h2>
 
-                <footer>
-                    <p>Loja de Cartas de Pokémon 2026</p>
-                </footer>
-            </header>
-        </nav>
-    </header>
-    
-</body>
-</html>
+          <p class="descricao">
+            {{ produto.descricao_produto }}
+          </p>
+
+          <p>
+            <strong>Preço:</strong>
+            R$ {{ produto.valor_unitario }}
+          </p>
+
+          <p>
+            <strong>Unidade:</strong>
+            {{ produto.unidade }}
+          </p>
+
+          <p>
+            <strong>Estoque:</strong>
+            {{ produto.estoque }}
+          </p>
+
+          <button type="button">Adicionar ao carrinho</button>
+        </div>
+      </div>
+    }
+  </section>
+</main>
+
+<footer>
+  <p>Loja de Cartas de Pokémon 2026</p>
+</footer>
+```
