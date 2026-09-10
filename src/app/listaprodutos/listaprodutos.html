@@ -1,6 +1,16 @@
-```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Cartas de Pokémon</title>
+    <link rel="stylesheet" href="listaprodutos.css">
+</head>
+<body>
+
 <header>
   <h1>Loja de Cartas de Pokémon</h1>
+
 
   <nav>
     <a href="#">Início</a>
@@ -10,51 +20,48 @@
     <a href="#">Setores</a>
   </nav>
 </header>
+<main class="home-container">
+  <section class="home-topo">
+    <div>
+      <span class="subtitulo"> POKÉMON TCG STORE </span>
 
-<main>
-  <section class="boas-vindas">
-    <h2>Bem-vindo à nossa loja!</h2>
+      <h1>Escolha suas cartas</h1>
 
-    <p>Encontre as melhores cartas de Pokémon para sua coleção.</p>
+      <p>Monte seu deck com os melhores Pokémon da coleção.</p>
+    </div>
+
+    <a routerLink="/carrinho" class="contador-itens">
+      <strong>
+        {{ quantidadeItens }}
+      </strong>
+
+      <span> itens </span>
+    </a>
   </section>
 
-  <section class="lista-produtos">
-    @for (produto of produtos; track produto.idproduto) {
-      <div class="card-produto">
-        <div class="imagem-produto">
-          <img [src]="produto.imagem" [alt]="produto.produto" />
-        </div>
-
-        <div class="informacoes-produto">
-          <h2>{{ produto.produto }}</h2>
-
-          <p class="descricao">
-            {{ produto.descricao_produto }}
-          </p>
-
-          <p>
-            <strong>Preço:</strong>
-            R$ {{ produto.valor_unitario }}
-          </p>
-
-          <p>
-            <strong>Unidade:</strong>
-            {{ produto.unidade }}
-          </p>
-
-          <p>
-            <strong>Estoque:</strong>
-            {{ produto.estoque }}
-          </p>
-
-          <button type="button">Adicionar ao carrinho</button>
-        </div>
+  <section class="grid-produtos">
+    <article class="produto-card" *ngFor="let p of produtos">
+      <div class="produto-imagem">
+        <img [src]="'img/products/' + p.imagem" [alt]="p.produto" />
       </div>
-    }
+
+      <span class="categoria">Pokémon TCG</span>
+
+      <h2>{{ p.produto }}</h2>
+
+      <p class="colecao">{{ p.descricao_produto }}</p>
+
+      <div class="produto-rodape">
+        <strong class="preco"> R$ {{ p.valor_unitario.toFixed(2) }} </strong>
+
+        <button type="button" class="botao-adicionar" (click)="adicionarAoCarrinho(p)">
+          Adicionar
+        </button>
+      </div>
+    </article>
   </section>
 </main>
 
 <footer>
   <p>Loja de Cartas de Pokémon 2026</p>
 </footer>
-```

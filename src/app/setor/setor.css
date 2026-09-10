@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+div {
+    margin: 10px;
+}
+
+div div {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
