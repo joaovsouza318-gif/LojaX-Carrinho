@@ -2,7 +2,7 @@
 
     <h1>Cadastro</h1>
 
-    <form id="pessoa-form" (ngSubmit)="exibeDados()" ngNativeValidate>
+    <form id="pessoa-form" (ngSubmit)="enviaDados()" ngNativeValidate>
 
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" maxlength="70" [(ngModel)]="nome" required>
