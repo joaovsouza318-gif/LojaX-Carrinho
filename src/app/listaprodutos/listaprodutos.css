@@ -1,445 +1,283 @@
 /* Configurações gerais */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+:host {
+  display: block;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background: #f2f2f2;
   color: #222;
+}
 
-  /* Estrutura geral */
-
-  /* Configuração geral */
-  :host {
-    display: block;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
-    color: #222;
-  }
-
-  /* =========================
+/* =========================
      CABEÇALHO
      ========================= */
 
-  header {
-    background-color: #222;
-    padding: 20px 50px;
+header {
+  background-color: #222;
+  padding: 20px 50px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  header h1 {
-    color: #ffd700;
-    font-size: 28px;
+header h1 {
+  margin: 0;
+  color: white;
+  font-size: 28px;
+}
 
-    background: #222;
-    padding: 20px;
-    text-align: center;
-  }
+nav {
+  display: flex;
+  gap: 25px;
+}
 
-  header h1 {
-    margin: 0 0 20px;
-    color: white;
-    font-size: 32px;
-  }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
 
-  nav {
-    display: flex;
-    gap: 25px;
-  }
+nav a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
 
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }
-
-  nav a:hover {
-    color: #ffd700;
-
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: opacity 0.2s;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
-
-    opacity: 0.7;
-  }
-
-  /* =========================
+/* =========================
      ÁREA PRINCIPAL
      ========================= */
 
-  main {
-    min-height: 80vh;
+main {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 80vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  margin: 0 auto;
+  padding: 40px 30px;
+}
 
-  /* Área de apresentação da loja */
-  section {
-    background-color: white;
-    width: 80%;
-    max-width: 900px;
-
-    padding: 50px;
-    text-align: center;
-
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  }
-
-  section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-
-  section p {
-    font-size: 18px;
-    margin-bottom: 30px;
-
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 25px;
-  }
-
-  /* =========================
+/* =========================
      TOPO DA LISTA
      ========================= */
 
-  .home-topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.home-topo {
+  width: 100%;
 
-    margin-bottom: 40px;
-    padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    background: white;
-    border-radius: 15px;
+  margin-bottom: 40px;
+  padding: 30px;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  }
+  background: white;
+  border-radius: 15px;
 
-  .subtitulo {
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: #777;
-  }
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
 
-  .home-topo h1 {
-    margin: 10px 0;
-    font-size: 34px;
-  }
+.subtitulo {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #777;
+}
 
-  .home-topo p {
-    margin: 0;
-    color: #666;
-  }
+.home-topo h1 {
+  margin: 10px 0;
+  font-size: 34px;
+}
 
-  /* =========================
+.home-topo p {
+  margin: 0;
+  color: #666;
+}
+
+/* =========================
      CONTADOR DO CARRINHO
      ========================= */
 
-  .contador-itens {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.contador-itens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    min-width: 90px;
-    min-height: 70px;
+  min-width: 90px;
+  min-height: 70px;
 
-    border-radius: 12px;
+  border-radius: 12px;
 
-    background: #222;
-    color: white;
+  background: #222;
+  color: white;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    transition: transform 0.2s;
-  }
+  transition: transform 0.2s;
+}
 
-  .contador-itens:hover {
-    transform: translateY(-3px);
-  }
+.contador-itens:hover {
+  transform: translateY(-3px);
+}
 
-  .contador-itens strong {
-    font-size: 25px;
-  }
+.contador-itens strong {
+  font-size: 25px;
+}
 
-  .contador-itens span {
-    font-size: 14px;
-  }
+.contador-itens span {
+  font-size: 14px;
+}
 
-  /* =========================
+/* =========================
      GRID DOS PRODUTOS
      ========================= */
 
-  .grid-produtos,
-  .lista-produtos {
-    display: grid;
+.grid-produtos {
+  width: 100%;
 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: grid;
 
-    gap: 25px;
-  }
+  grid-template-columns: repeat(3, 1fr);
 
-  /* =========================
-     PRIMEIRO TIPO DE CARD
+  gap: 25px;
+
+  margin: 0 auto;
+}
+
+/* =========================
+     CARD DO PRODUTO
      ========================= */
 
-  .produto-card {
-    background: white;
+.produto-card {
+  background: white;
 
-    border-radius: 15px;
+  border-radius: 15px;
 
-    padding: 20px;
+  padding: 20px;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 
-    transition:
-      transform 0.3s,
-      box-shadow 0.3s;
-  }
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
 
-  .produto-card:hover {
-    transform: translateY(-7px);
+.produto-card:hover {
+  transform: translateY(-7px);
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 
-  /* Imagem do primeiro card */
-
-  .produto-imagem {
-    height: 230px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 15px;
-  }
-
-  .produto-imagem img {
-    max-width: 100%;
-    max-height: 220px;
-
-    object-fit: contain;
-  }
-
-  /* Informações do primeiro card */
-
-  .categoria {
-    display: inline-block;
-
-    margin-bottom: 8px;
-
-    font-size: 12px;
-    font-weight: bold;
-
-    color: #777;
-
-    text-transform: uppercase;
-  }
-
-  .produto-card h2 {
-    margin: 8px 0;
-
-    font-size: 23px;
-  }
-
-  .colecao {
-    min-height: 40px;
-
-    color: #666;
-  }
-
-  /* Rodapé do card */
-
-  .produto-rodape {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    margin-top: 20px;
-  }
-
-  .preco {
-    font-size: 19px;
-  }
-
-  /* =========================
-     SEGUNDO TIPO DE CARD
+/* =========================
+     IMAGEM DO PRODUTO
      ========================= */
 
-  .card-produto {
-    background: white;
+.produto-imagem {
+  height: 230px;
 
-    border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    padding: 20px;
+  margin-bottom: 15px;
+}
 
-    text-align: center;
+.produto-imagem img {
+  max-width: 100%;
+  max-height: 220px;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  object-fit: contain;
+}
 
-    transition:
-      transform 0.3s,
-      box-shadow 0.3s;
-  }
-
-  .card-produto:hover {
-    transform: translateY(-7px);
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Imagem do segundo card */
-
-  .imagem-produto {
-    height: 220px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 15px;
-  }
-
-  .imagem-produto img {
-    max-width: 100%;
-    max-height: 210px;
-
-    object-fit: contain;
-  }
-
-  /* Informações do segundo card */
-
-  .informacoes-produto h2 {
-    margin: 10px 0;
-
-    font-size: 23px;
-  }
-
-  .descricao {
-    min-height: 40px;
-
-    color: #666;
-  }
-
-  .informacoes-produto p {
-    margin: 8px 0;
-  }
-
-  /* =========================
-     BOTÕES
+/* =========================
+     INFORMAÇÕES DO PRODUTO
      ========================= */
 
-  button {
-    background-color: #e53935;
-    color: white;
+.categoria {
+  display: inline-block;
 
-    border: none;
-    padding: 12px 25px;
+  margin-bottom: 8px;
 
-    border-radius: 8px;
-    font-size: 16px;
+  font-size: 12px;
+  font-weight: bold;
 
-    cursor: pointer;
-  }
+  color: #777;
 
-  button:hover {
-    background-color: #c62828;
+  text-transform: uppercase;
+}
 
-    margin-top: 15px;
+.produto-card h2 {
+  margin: 8px 0;
 
-    padding: 11px 18px;
+  font-size: 23px;
+}
 
-    border: none;
-    border-radius: 8px;
+.colecao {
+  min-height: 40px;
 
-    background: #222;
-    color: white;
+  color: #666;
+}
 
-    font-size: 14px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition:
-      transform 0.2s,
-      opacity 0.2s;
-  }
-
-  button:hover {
-    transform: scale(1.05);
-    opacity: 0.85;
-  }
-
-  .botao-adicionar {
-    margin-top: 0;
-  }
-
-  /* =========================
-     BOAS-VINDAS
+/* =========================
+     RODAPÉ DO CARD
      ========================= */
 
-  .boas-vindas {
-    margin-bottom: 35px;
+.produto-rodape {
+  display: flex;
 
-    padding: 30px;
+  justify-content: space-between;
+  align-items: center;
 
-    text-align: center;
+  margin-top: 20px;
+}
 
-    background: white;
+.preco {
+  font-size: 19px;
+}
 
-    border-radius: 15px;
+/* =========================
+     BOTÃO
+     ========================= */
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  }
+.botao-adicionar {
+  margin-top: 0;
 
-  .boas-vindas h2 {
-    margin-bottom: 10px;
+  padding: 11px 18px;
 
-    font-size: 28px;
-  }
+  border: none;
+  border-radius: 8px;
 
-  .boas-vindas p {
-    color: #666;
-  }
+  background: #e53935;
+  color: white;
 
-  /* =========================
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+
+.botao-adicionar:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+/* =========================
      RODAPÉ
      ========================= */
 
-  footer {
-    background-color: #222;
-    color: white;
-
-    text-align: center;
-    padding: 20px;
-  }
-
+footer {
   margin-top: 40px;
 
   padding: 25px;
@@ -447,7 +285,6 @@ body {
   text-align: center;
 
   background: #222;
-
   color: white;
 }
 
@@ -459,7 +296,31 @@ footer p {
      CELULAR
      ========================= */
 
+@media (max-width: 900px) {
+  .grid-produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+
+    text-align: center;
+  }
+
+  main {
+    padding: 25px 15px;
+  }
+
   .home-topo {
     flex-direction: column;
 
@@ -472,18 +333,7 @@ footer p {
     font-size: 28px;
   }
 
-  nav {
-    flex-direction: column;
-
-    gap: 12px;
-  }
-
-  main {
-    padding: 25px 15px;
-  }
-
-  .grid-produtos,
-  .lista-produtos {
+  .grid-produtos {
     grid-template-columns: 1fr;
   }
 
