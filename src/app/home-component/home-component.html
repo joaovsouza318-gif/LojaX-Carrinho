@@ -1,67 +1,35 @@
 <main class="home-container">
+  <section class="home-banner">
+    <span class="subtitulo"> POKÉMON TCG STORE </span>
 
-  <section class="home-topo">
+    <h1>Bem-vindo à PokeCards!</h1>
 
-    <div>
-      <span class="subtitulo">
-        POKÉMON TCG STORE
-      </span>
+    <p>
+      Encontre as melhores cartas de Pokémon para sua coleção. Escolha seus favoritos e monte seu
+      deck.
+    </p>
 
-      <h1>Escolha suas cartas</h1>
+    <div class="home-botoes">
+      <a routerLink="/lista-produtos" class="botao-principal"> Ver cartas </a>
 
-      <p>
-        Monte seu deck com os melhores Pokémon da coleção.
-      </p>
+      <a routerLink="/carrinho" class="botao-secundario"> Ver carrinho </a>
+    </div>
+  </section>
+
+  <section class="home-info">
+    <div class="info-card">
+      <h2>🃏 Cartas Pokémon</h2>
+      <p>Encontre diferentes Pokémon para completar sua coleção.</p>
     </div>
 
+    <div class="info-card">
+      <h2>🛒 Seu carrinho</h2>
+      <p>Adicione suas cartas favoritas e confira seu pedido.</p>
+    </div>
 
-    <a routerLink="/carrinho" class="contador-itens">
-
-      <strong>
-        {{ quantidadeItens }}
-      </strong>
-
-      <span>
-        itens
-      </span>
-
-    </a>
-
+    <div class="info-card">
+      <h2>⭐ Monte sua coleção</h2>
+      <p>Escolha seus Pokémon favoritos e monte seu deck.</p>
+    </div>
   </section>
-
-
-  <section class="grid-produtos">
-
-    <article class="produto-card" *ngFor="let p of produtos">
-
-      <div class="produto-imagem">
-        <img [src]="'img/products/' + p.imagem" [alt]="p.produto" />
-      </div>
-
-      <span class="categoria">Pokémon TCG</span>
-
-      <h2>{{ p.produto }}</h2>
-
-      <p class="colecao">{{ p.descricao_produto }}</p>
-
-      <div class="produto-rodape">
-
-        <strong class="preco">
-          R$ {{ p.valor_unitario.toFixed(2) }}
-        </strong>
-
-        <button
-          type="button"
-          class="botao-adicionar"
-          (click)="adicionarAoCarrinho(p)"
-        >
-          Adicionar
-        </button>
-
-      </div>
-
-    </article>
-
-  </section>
-
 </main>
