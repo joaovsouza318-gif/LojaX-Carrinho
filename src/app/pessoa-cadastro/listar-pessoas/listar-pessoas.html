@@ -1,25 +1,41 @@
-<div id="div-listar">
-    <h2>Listar Pessoas</h2>
+<div class="listar-container">
+    <h1>Listar Pessoas</h1>
 
-    <div id="listar-pessoas">
-        @for (elem of listarPessoas(); track elem.idpessoa){
-          <div class="item-pessoa">
-            <span class="dados-pessoas">
-                {{elem.idpessoa}} - {{elem.nome}} - {{elem.cpf}} - {{calcIdade(elem.data_nascimento)}} anos - {{elem.sexo}} - {{elem.telefone}} - {{elem.email}}
-            </span>
-
-            <span class="lnks-lista">
-                <a class="lnk-editar" (click)="buscarPessoas(elem)"> Editar </a>
-                
-                <a class="lnk-excluir" (click)="excluirPessoa(elem)"> Excluir </a>
-            </span>
-          </div>
-        }@empty{
-            <div class=" div-pessoas">
-                NENHUM REGISTRO NA LISTA
-            </div>
-        }
-        
+    <div class="tabela-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Idade</th>
+                    <th>Sexo</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (pessoa of listarPessoas(); track pessoa.idpessoa) {
+                    <tr>
+                        <td>{{pessoa.idpessoa}}</td>
+                        <td>{{pessoa.nome}}</td>
+                        <td>{{pessoa.cpf}}</td>
+                        <td>{{calcIdade(pessoa.data_nascimento)}} anos</td>
+                        <td>{{pessoa.sexo}}</td>
+                        <td>{{pessoa.telefone}}</td>
+                        <td>{{pessoa.email}}</td>
+                        <td class="lnks-lista">
+                            <a class="lnk-editar" (click)="buscarPessoas(pessoa)"> Editar </a>
+                            <a class="lnk-excluir" (click)="excluirPessoa(pessoa)"> Excluir </a>
+                        </td>
+                    </tr>
+                } @empty {
+                    <tr>
+                        <td colspan="8" class="sem-registro">NENHUM REGISTRO NA LISTA</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
-
 </div>
