@@ -1,0 +1,116 @@
+:host {
+    display: block;
+    min-height: calc(100vh - 80px);
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .listar-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Título no mesmo estilo do card branco translúcido usado no cadastro */
+  h1 {
+    margin: 0 auto 25px auto;
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 15px;
+    font-size: 32px;
+    color: #172554;
+  }
+  
+  .tabela-wrapper {
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background: #172554;
+  }
+  
+  th {
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  tbody tr:hover {
+    background: #eff6ff;
+  }
+  
+  .lnks-lista {
+    white-space: nowrap;
+  }
+  
+  .lnk-editar,
+  .lnk-excluir {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 7px;
+    margin-right: 6px;
+    font-size: 13px;
+    transition: opacity 0.2s;
+  }
+  
+  .lnk-editar {
+    background: #2563eb;
+    color: white;
+  }
+  
+  .lnk-excluir {
+    background: #ef4444;
+    color: white;
+  }
+  
+  .lnk-editar:hover,
+  .lnk-excluir:hover {
+    opacity: 0.85;
+  }
+  
+  .sem-registro {
+    text-align: center;
+    padding: 30px !important;
+    color: #666;
+    font-style: italic;
+  }
+  
+  /* Celular */
+  @media (max-width: 700px) {
+    :host {
+      padding: 20px 10px;
+    }
+  
+    h1 {
+      font-size: 26px;
+      padding: 15px 20px;
+    }
+  
+    .tabela-wrapper {
+      overflow-x: auto;
+    }
+  
+    table {
+      min-width: 700px;
+    }
+  }
