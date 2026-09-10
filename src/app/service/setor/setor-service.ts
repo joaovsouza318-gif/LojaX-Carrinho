@@ -1,6 +1,7 @@
 
 import { Setor } from "../../models/setor";
 
+
 export class SetorService {
 
   private setores: Setor[] = [
