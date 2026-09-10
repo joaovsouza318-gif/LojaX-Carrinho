@@ -1,5 +1,5 @@
 
-import { Setor } from '../../models/setotr';
+import { Setor } from '../../models/setor';
 
 export class SetorService {
 
