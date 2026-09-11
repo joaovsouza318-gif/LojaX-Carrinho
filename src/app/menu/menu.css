@@ -1,0 +1,330 @@
+:host {
+    display: block;
+  
+    --azul: #2563eb;
+    --azul-escuro: #172554;
+  
+    --amarelo: #facc15;
+    --vermelho: #ef4444;
+  
+    --branco: #ffffff;
+  
+    --texto-secundario: #64748b;
+  
+    --borda: #e2e8f0;
+  
+    --sombra:
+      0 4px 20px
+      rgba(15, 23, 42, 0.06);
+  }
+  
+  
+  /* ==========================
+     CABEÇALHO
+  ========================== */
+  
+  .cabecalho {
+    position: sticky;
+  
+    top: 0;
+  
+    z-index: 100;
+  
+    background: var(--branco);
+  
+    border-bottom: 1px solid var(--borda);
+  
+    box-shadow: var(--sombra);
+  
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+  }
+  
+  
+  .cabecalho-conteudo {
+    max-width: 1250px;
+  
+    margin: 0 auto;
+  
+    padding: 14px 7%;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+    gap: 24px;
+  }
+  
+  
+  /* ==========================
+     LOGO
+  ========================== */
+  
+  .logo {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 12px;
+  
+    text-decoration: none;
+  
+    color: var(--azul-escuro);
+  }
+  
+  
+  .pokebola {
+    position: relative;
+  
+    width: 34px;
+  
+    height: 34px;
+  
+    flex-shrink: 0;
+  
+    border: 2px solid var(--azul-escuro);
+  
+    border-radius: 50%;
+  
+    background:
+      linear-gradient(
+        to bottom,
+        var(--vermelho) 0%,
+        var(--vermelho) 45%,
+        #1e293b 45%,
+        #1e293b 55%,
+        white 55%,
+        white 100%
+      );
+  }
+  
+  
+  .pokebola-centro {
+    position: absolute;
+  
+    width: 10px;
+  
+    height: 10px;
+  
+    left: 50%;
+    top: 50%;
+  
+    transform: translate(-50%, -50%);
+  
+    border: 2px solid var(--azul-escuro);
+  
+    border-radius: 50%;
+  
+    background: white;
+  }
+  
+  
+  .logo-texto {
+    display: flex;
+  
+    flex-direction: column;
+  
+    line-height: 1.1;
+  }
+  
+  
+  .logo-texto strong {
+    font-size: 18px;
+  }
+  
+  
+  .logo-texto span {
+    font-size: 11px;
+  
+    color: var(--texto-secundario);
+  
+    font-weight: bold;
+  
+    letter-spacing: 0.5px;
+  
+    text-transform: uppercase;
+  }
+  
+  
+  /* ==========================
+     NAVEGAÇÃO
+  ========================== */
+  
+  .menu ul {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 30px;
+  
+    list-style: none;
+  
+    margin: 0;
+  
+    padding: 0;
+  }
+  
+  
+  .menu a {
+    position: relative;
+  
+    color: var(--texto-secundario);
+  
+    font-size: 14px;
+  
+    font-weight: bold;
+  
+    text-decoration: none;
+  
+    padding: 6px 0;
+  
+    transition: color 0.2s ease;
+  }
+  
+  
+  .menu a:hover {
+    color: var(--azul);
+  }
+  
+  
+  .menu a.ativo {
+    color: var(--azul-escuro);
+  }
+  
+  
+  .menu a.ativo::after {
+    content: "";
+  
+    position: absolute;
+  
+    left: 0;
+    bottom: -4px;
+  
+    width: 100%;
+    height: 3px;
+  
+    border-radius: 2px;
+  
+    background:
+      linear-gradient(
+        to right,
+        var(--azul),
+        var(--amarelo)
+      );
+  }
+  
+  
+  /* ==========================
+     CARRINHO
+  ========================== */
+  
+  .carrinho-link {
+    position: relative;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 8px;
+  
+    padding: 9px 16px;
+  
+    border-radius: 12px;
+  
+    background: var(--azul-escuro);
+  
+    color: white;
+  
+    font-size: 13px;
+  
+    font-weight: bold;
+  
+    text-decoration: none;
+  
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  
+  
+  .carrinho-link:hover {
+    transform: translateY(-2px);
+  
+    box-shadow:
+      0 8px 18px
+      rgba(23, 37, 84, 0.25);
+  }
+  
+  
+  .carrinho-icone {
+    font-size: 15px;
+  }
+  
+  
+  .carrinho-badge {
+    position: absolute;
+  
+    top: -8px;
+    right: -8px;
+  
+    min-width: 20px;
+  
+    height: 20px;
+  
+    padding: 0 5px;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    border-radius: 999px;
+  
+    background: var(--amarelo);
+  
+    color: var(--azul-escuro);
+  
+    font-size: 11px;
+  
+    font-weight: bold;
+  }
+  
+  
+  /* ==========================
+     RESPONSIVIDADE
+  ========================== */
+  
+  @media (max-width: 700px) {
+  
+    .cabecalho-conteudo {
+      flex-wrap: wrap;
+  
+      gap: 14px;
+  
+      padding: 14px 5%;
+    }
+  
+    .menu ul {
+      gap: 18px;
+    }
+  
+    .logo-texto span {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+  
+    .menu a {
+      font-size: 13px;
+    }
+  
+    .carrinho-link span:not(.carrinho-badge) {
+      display: none;
+    }
+  }

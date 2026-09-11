@@ -1,17 +1,35 @@
-<section class="home-produtos">
-  <h2 class="home-titulo">Escolha sua carta</h2>
+<main class="home-container">
+  <section class="home-banner">
+    <span class="subtitulo"> POKÉMON TCG STORE </span>
 
-  <div class="grid-produtos">
-    <div class="card" *ngFor="let p of produtos">
-      <img [src]="'img/products/' + p.imagem" [alt]="p.produto" />
+    <h1>Bem-vindo à PokeCards!</h1>
 
-      <h3 class="card-nome">{{ p.produto }}</h3>
-      <p class="card-descricao">{{ p.descricao_produto }}</p>
-      <p class="card-preco">R$ {{ p.valor_unitario.toFixed(2) }}</p>
+    <p>
+      Encontre as melhores cartas de Pokémon para sua coleção. Escolha seus favoritos e monte seu
+      deck.
+    </p>
 
-      <button class="card-botao" (click)="adicionarAoCarrinho(p)">
-        Adicionar ao carrinho
-      </button>
+    <div class="home-botoes">
+      <a routerLink="/lista-produtos" class="botao-principal"> Ver cartas </a>
+
+      <a routerLink="/carrinho" class="botao-secundario"> Ver carrinho </a>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="home-info">
+    <div class="info-card">
+      <h2> Cartas Pokémon</h2>
+      <p>Encontre diferentes Pokémon para completar sua coleção.</p>
+    </div>
+
+    <div class="info-card">
+      <h2> Seu carrinho</h2>
+      <p>Adicione suas cartas favoritas e confira seu pedido.</p>
+    </div>
+
+    <div class="info-card">
+      <h2> Monte sua coleção</h2>
+      <p>Escolha seus Pokémon favoritos e monte seu deck.</p>
+    </div>
+  </section>
+</main>

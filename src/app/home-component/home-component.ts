@@ -1,35 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Produto } from '../models/produto';
-import { ProdutosService } from '../service/produtos/produtos-service';
-import { CarrinhoService } from '../service/carrinho/carrinho-service';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [CommonModule],
   selector: 'app-home-component',
-  styleUrl: './home-component.css',
+  imports: [RouterLink],
   templateUrl: './home-component.html',
+  styleUrl: './home-component.css',
 })
-export class HomeComponent implements OnInit {
-  produtos: Produto[] = [];
-
-  constructor(
-    private produtosService: ProdutosService,
-    private carrinhoService: CarrinhoService
-  ) {}
-
-  ngOnInit(): void {
-    this.produtosService.listar().subscribe({
-      next: (produtos) => {
-        this.produtos = produtos;
-      },
-      error: (erro) => {
-        console.error('Erro ao carregar produtos:', erro);
-      }
-    });
-  }
-
-  adicionarAoCarrinho(produto: Produto): void {
-    this.carrinhoService.adicionar(produto);
-  }
-}
+export class HomeComponent {}
