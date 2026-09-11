@@ -1,12 +1,97 @@
-<p>listaprodutos works!</p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<main class="home-container">
+
+  <section class="home-topo">
+
+    <div>
+      <span class="subtitulo">
+        POKÉMON TCG STORE
+      </span>
+
+      <h1>Escolha suas cartas</h1>
+
+      <p>
+        Monte seu deck com os melhores Pokémon da coleção.
+      </p>
+    </div>
+
+
+    <a
+      routerLink="/carrinho"
+      class="contador-itens"
+    >
+      <strong>
+        {{ quantidadeItens }}
+      </strong>
+
+      <span>itens</span>
+    </a>
+
+  </section>
+
+
+  <section class="grid-produtos">
+
+    @for (p of produtos(); track p.idproduto) {
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            [src]="imagemProduto(p)"
+            [alt]="p.produto"
+          >
+
+        </div>
+
+
+        <span class="categoria">
+          Pokémon TCG
+        </span>
+
+
+        <h2>
+          {{ p.produto }}
+        </h2>
+
+
+        <p class="colecao">
+          {{ p.descricao_produto }}
+        </p>
+
+
+        <div class="produto-rodape">
+
+          <strong class="preco">
+            R$ {{ formatarPreco(p.valor_unitario) }}
+          </strong>
+
+
+          <button
+            type="button"
+            class="botao-adicionar"
+            (click)="adicionarAoCarrinho(p)"
+          >
+            Adicionar
+          </button>
+
+        </div>
+
+      </article>
+
+    } @empty {
+
+      <p>
+        Nenhum produto encontrado.
+      </p>
+
+    }
+
+  </section>
+
+</main>
+
+
+<footer>
+  <p>Loja de Cartas de Pokémon 2026</p>
+</footer>
