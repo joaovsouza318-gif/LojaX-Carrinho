@@ -21,7 +21,14 @@ export class Listaprodutos implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.produtos = this.produtosService.listar();
+    this.produtosService.listar().subscribe({
+      next: (produtos) => {
+        this.produtos = produtos;
+      },
+      error: (erro) => {
+        console.error('Erro ao carregar produtos:', erro);
+      },
+    });
   }
 
   get quantidadeItens(): number {
@@ -32,3 +39,4 @@ export class Listaprodutos implements OnInit {
     this.carrinhoService.adicionar(produto);
   }
 }
+//o professor quer tambem que tenha um banco de dados no mysql, que mostre os produtos e seções no fastAPI
